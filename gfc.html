@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good-Fast-Cheap</title>
+</head>
+<body>
+<input type="checkbox" id="good" onclick="checkGood();">Good
+<br>
+<input type="checkbox" id="fast" onclick="checkFast();">Fast
+<br>
+<input type="checkbox" id="cheap" onclick="checkCheap();">Cheap
+<br>
+<script>
+    function checkGood(){
+        let GOOD = document.getElementById("good");
+        let FAST = document.getElementById("fast");
+        let CHEAP = document.getElementById("cheap");
+        if(GOOD.checked==true){
+            if(FAST.checked==true&&CHEAP.checked==true){
+                FAST.checked=false;
+            }
+        }
+    }
+    function checkFast(){
+        let GOOD = document.getElementById("good");
+        let FAST = document.getElementById("fast");
+        let CHEAP = document.getElementById("cheap");
+        if(FAST.checked==true){
+            if(GOOD.checked==true&&CHEAP.checked==true){
+                CHEAP.checked=false;
+            }
+        }
+    }
+    function checkCheap(){
+        let GOOD = document.getElementById("good");
+        let FAST = document.getElementById("fast");
+        let CHEAP = document.getElementById("cheap");
+        if (CHEAP.checked==true) {
+            if (GOOD.checked==true&&FAST.checked==true) {
+                GOOD.checked = false;
+            }
+        }
+    }
+</script>
+</body>
+</html>
